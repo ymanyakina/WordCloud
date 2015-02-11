@@ -1,0 +1,22 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf0 \
+\
+1. loading modalHelper.js in script tag will expose modalHelper(svgID, wordMap).\
+2. modalHelper takes two arguments : \
+svgID is the id of your SVG container (you should add an id attribute if it doesn\'92t have one already.\
+wordMap is an object where each key is a case sensitive match to a word in your word cloud. the value must be a function that returns an html string. This string will be displayed in the modal. The function will receive the current word as input.\
+\
+3. All words in the cloud that do not have an explicit mapping will trigger a \'91default\'92 function that can be specified in the word map object.\
+\
+var wordMap = \{\
+	\'91word1\'92: \'91<html></html>\'92 ,\
+	\'91word2\'92: \'91<html></html>\'92 ,\
+	\'91default\'92: \'91\'92\
+\}\
+\
+}
