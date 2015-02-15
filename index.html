@@ -59,7 +59,10 @@
             'University' : function(){
                 return fontformat('My university career has given me a great foundation for working with youth. See \'teaching\' or \'fieldwork\' to find out more.')
             },
-            'default': fontformat
+            'default': function(x){
+                d3.select('.modal').remove();
+                
+            }
 
              }
 
